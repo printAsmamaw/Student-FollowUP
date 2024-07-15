@@ -1,5 +1,6 @@
 import React from 'react'
 import hame from "../../asset/images/home.png"
+import { Link } from 'react-router-dom'
 function Home() {
   return (
     <div class="main-wrapper">
@@ -139,10 +140,10 @@ function Home() {
 </div>
 <ul class="nav header-navbar-rht">
 <li class="nav-item">
-<a class="nav-link header-sign" href="https://dreamslms.dreamstechnologies.com/html/login.html">Signin</a>
+<Link class="nav-link header-sign" to="/login">Signin</Link>
 </li>
 <li class="nav-item">
-<a class="nav-link header-login" href="https://dreamslms.dreamstechnologies.com/html/register.html">Signup</a>
+<Link class="nav-link header-login" to="/signup">Signup</Link>
 </li>
 </ul>
 </div>
