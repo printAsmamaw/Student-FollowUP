@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
 import hame from "../../asset/images/home.png";
-import { Link } from 'react-router-dom';
-function StudentHomePage() {
-  return <div class="main-wrapper">
+import { Link } from "react-router-dom";
+function TeachersHomePage() {
+  return (
+    <div class="main-wrapper">
       <header class="header">
         <div class="header-fixed">
           <nav class="navbar navbar-expand-lg header-nav scroll-sticky">
@@ -15,16 +16,26 @@ function StudentHomePage() {
                     <span />
                   </span>
                 </a>
-                <a href="https://dreamslms.dreamstechnologies.com/html/index.html" class="navbar-brand logo">
+                <a
+                  href="https://dreamslms.dreamstechnologies.com/html/index.html"
+                  class="navbar-brand logo"
+                >
                   {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/logo.svg" class="img-fluid" alt="Logo"> */}
                 </a>
               </div>
               <div class="main-menu-wrapper">
                 <div class="menu-header">
-                  <a href="https://dreamslms.dreamstechnologies.com/html/index.html" class="menu-logo">
+                  <a
+                    href="https://dreamslms.dreamstechnologies.com/html/index.html"
+                    class="menu-logo"
+                  >
                     {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/logo.svg" class="img-fluid" alt="Logo"> */}
                   </a>
-                  <a id="menu_close" class="menu-close" href="javascript:void(0);">
+                  <a
+                    id="menu_close"
+                    class="menu-close"
+                    href="javascript:void(0);"
+                  >
                     <i class="fas fa-times" />
                   </a>
                 </div>
@@ -36,7 +47,7 @@ function StudentHomePage() {
                   </li>
                   <li class="has-submenu">
                     <Link to="/attend">
-                      Attendance <i class="fas fa-chevron-down" />
+                      Take Attendance <i class="fas fa-chevron-down" />
                     </Link>
                   </li>
                   <li class="has-submenu">
@@ -65,27 +76,46 @@ function StudentHomePage() {
                 <li class="nav-item user-nav">
                   <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
                     <span class="user-img">
-                      <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user16.jpg" alt="Img" />
+                      <img
+                        src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user16.jpg"
+                        alt="Img"
+                      />
                       <span class="status online" />
                     </span>
                   </a>
-                  <div class="users dropdown-menu dropdown-menu-right" data-popper-placement="bottom-end">
+                  <div
+                    class="users dropdown-menu dropdown-menu-right"
+                    data-popper-placement="bottom-end"
+                  >
                     <div class="user-header">
                       <div class="avatar avatar-sm">
-                        <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user16.jpg" alt="User Image" class="avatar-img rounded-circle" />
+                        <img
+                          src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user16.jpg"
+                          alt="User Image"
+                          class="avatar-img rounded-circle"
+                        />
                       </div>
                       <div class="user-text">
                         <h6>Rolands R</h6>
                         <p class="text-muted mb-0">Student</p>
                       </div>
                     </div>
-                    <a class="dropdown-item" href="https://dreamslms.dreamstechnologies.com/html/student-dashboard.html">
+                    <a
+                      class="dropdown-item"
+                      href="https://dreamslms.dreamstechnologies.com/html/student-dashboard.html"
+                    >
                       <i class="feather-home me-1" /> Dashboard
                     </a>
-                    <a class="dropdown-item" href="https://dreamslms.dreamstechnologies.com/html/student-settings.html">
+                    <a
+                      class="dropdown-item"
+                      href="https://dreamslms.dreamstechnologies.com/html/student-settings.html"
+                    >
                       <i class="feather-user me-1" /> Profile
                     </a>
-                    <a class="dropdown-item" href="https://dreamslms.dreamstechnologies.com/html/setting-student-subscription.html">
+                    <a
+                      class="dropdown-item"
+                      href="https://dreamslms.dreamstechnologies.com/html/setting-student-subscription.html"
+                    >
                       <i class="feather-star me-1" /> Subscription
                     </a>
                     <div class="dropdown-item night-mode">
@@ -93,10 +123,17 @@ function StudentHomePage() {
                         <i class="feather-moon me-1" /> Night Mode{" "}
                       </span>
                       <div class="form-check form-switch check-on m-0">
-                        <input class="form-check-input" type="checkbox" id="night-mode" />
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="night-mode"
+                        />
                       </div>
                     </div>
-                    <a class="dropdown-item" href="https://dreamslms.dreamstechnologies.com/html/index.html">
+                    <a
+                      class="dropdown-item"
+                      href="https://dreamslms.dreamstechnologies.com/html/index.html"
+                    >
                       <i class="feather-log-out me-1" /> Logout
                     </a>
                   </div>
@@ -113,16 +150,24 @@ function StudentHomePage() {
             <div class="col-md-7">
               <div class="home-slide-face aos" data-aos="fade-up">
                 <div class="home-slide-text ">
-                  <h5>Welcome Student Name </h5>
+                  <h5>Welcome  
+                  Teachers Name </h5>
                   <h1>XYZ Academy</h1>
                   <p>Own your future learning new skills online</p>
                 </div>
                 <div class="banner-content">
-                  <form class="form" action="https://dreamslms.dreamstechnologies.com/html/course-list.html">
+                  <form
+                    class="form"
+                    action="https://dreamslms.dreamstechnologies.com/html/course-list.html"
+                  >
                     <div class="form-inner">
                       <div class="input-group">
                         <i class="fa-solid fa-magnifying-glass search-icon" />
-                        <input type="email" class="form-control" placeholder="Search School, Online eductional centers, etc" />
+                        <input
+                          type="email"
+                          class="form-control"
+                          placeholder="Search School, Online eductional centers, etc"
+                        />
                         <span class="drop-detail">
                           <select class="form-select select">
                             <option>Category</option>
@@ -176,7 +221,10 @@ function StudentHomePage() {
             <div class="row">
               <div class="col-lg-3 col-md-6">
                 <div class="course-full-width">
-                  <div class="blur-border course-radius align-items-center aos" data-aos="fade-up">
+                  <div
+                    class="blur-border course-radius align-items-center aos"
+                    data-aos="fade-up"
+                  >
                     <div class="online-course d-flex align-items-center">
                       <div class="course-img">
                         {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/pencil-icon.svg" alt="Img"> */}
@@ -255,7 +303,10 @@ function StudentHomePage() {
               <h2>Top Category</h2>
             </div>
             <div class="all-btn all-category d-flex align-items-center">
-              <a href="https://dreamslms.dreamstechnologies.com/html/job-category.html" class="btn btn-primary">
+              <a
+                href="https://dreamslms.dreamstechnologies.com/html/job-category.html"
+                class="btn btn-primary"
+              >
                 All Categories
               </a>
             </div>
@@ -267,7 +318,10 @@ function StudentHomePage() {
               neque. Suspendisse imperdiet.
             </p>
           </div>
-          <div class="owl-carousel mentoring-course owl-theme aos" data-aos="fade-up">
+          <div
+            class="owl-carousel mentoring-course owl-theme aos"
+            data-aos="fade-up"
+          >
             <div class="feature-box text-center ">
               <div class="feature-bg">
                 <div class="feature-header">
@@ -477,7 +531,10 @@ function StudentHomePage() {
               <h2>Featured Courses</h2>
             </div>
             <div class="all-btn all-category d-flex align-items-center">
-              <a href="https://dreamslms.dreamstechnologies.com/html/course-list.html" class="btn btn-primary">
+              <a
+                href="https://dreamslms.dreamstechnologies.com/html/course-list.html"
+                class="btn btn-primary"
+              >
                 All Courses
               </a>
             </div>
@@ -550,7 +607,10 @@ function StudentHomePage() {
                           </span>
                         </div>
                         <div class="all-btn all-category d-flex align-items-center">
-                          <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                          <a
+                            href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                            class="btn btn-primary"
+                          >
                             BUY NOW
                           </a>
                         </div>
@@ -618,7 +678,10 @@ function StudentHomePage() {
                           </span>
                         </div>
                         <div class="all-btn all-category d-flex align-items-center">
-                          <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                          <a
+                            href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                            class="btn btn-primary"
+                          >
                             BUY NOW
                           </a>
                         </div>
@@ -684,7 +747,10 @@ function StudentHomePage() {
                           </span>
                         </div>
                         <div class="all-btn all-category d-flex align-items-center">
-                          <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                          <a
+                            href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                            class="btn btn-primary"
+                          >
                             BUY NOW
                           </a>
                         </div>
@@ -753,7 +819,10 @@ function StudentHomePage() {
                           </span>
                         </div>
                         <div class="all-btn all-category d-flex align-items-center">
-                          <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                          <a
+                            href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                            class="btn btn-primary"
+                          >
                             BUY NOW
                           </a>
                         </div>
@@ -822,7 +891,10 @@ function StudentHomePage() {
                           </span>
                         </div>
                         <div class="all-btn all-category d-flex align-items-center">
-                          <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                          <a
+                            href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                            class="btn btn-primary"
+                          >
                             BUY NOW
                           </a>
                         </div>
@@ -889,7 +961,10 @@ function StudentHomePage() {
                           </span>
                         </div>
                         <div class="all-btn all-category d-flex align-items-center">
-                          <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                          <a
+                            href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                            class="btn btn-primary"
+                          >
                             BUY NOW
                           </a>
                         </div>
@@ -916,9 +991,9 @@ function StudentHomePage() {
               <div class="section-text aos" data-aos="fade-up">
                 <p>
                   Get certified, master modern tech skills, and level up your
-                  career — whether you’re starting out or a seasoned pro. 95%
-                  of eLearning learners report our hands-on content directly
-                  helped their careers.
+                  career — whether you’re starting out or a seasoned pro. 95% of
+                  eLearning learners report our hands-on content directly helped
+                  their careers.
                 </p>
               </div>
               <div class="career-group aos" data-aos="fade-up">
@@ -991,7 +1066,10 @@ function StudentHomePage() {
               <h2>TRENDING COURSES</h2>
             </div>
             <div class="all-btn all-category d-flex align-items-center">
-              <a href="https://dreamslms.dreamstechnologies.com/html/course-list.html" class="btn btn-primary">
+              <a
+                href="https://dreamslms.dreamstechnologies.com/html/course-list.html"
+                class="btn btn-primary"
+              >
                 All Courses
               </a>
             </div>
@@ -1003,7 +1081,10 @@ function StudentHomePage() {
               neque. Suspendisse imperdiet.
             </p>
           </div>
-          <div class="owl-carousel trending-course owl-theme aos" data-aos="fade-up">
+          <div
+            class="owl-carousel trending-course owl-theme aos"
+            data-aos="fade-up"
+          >
             <div class="course-box trend-box">
               <div class="product trend-product">
                 <div class="product-img">
@@ -1063,7 +1144,10 @@ function StudentHomePage() {
                       </span>
                     </div>
                     <div class="all-btn all-category d-flex align-items-center">
-                      <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                      <a
+                        href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                        class="btn btn-primary"
+                      >
                         BUY NOW
                       </a>
                     </div>
@@ -1104,8 +1188,7 @@ function StudentHomePage() {
                   </div>
                   <h3 class="title">
                     <a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">
-                      Responsive Web Design Essentials HTML5 CSS3 and
-                      Bootstrap
+                      Responsive Web Design Essentials HTML5 CSS3 and Bootstrap
                     </a>
                   </h3>
                   <div class="course-info d-flex align-items-center">
@@ -1130,7 +1213,10 @@ function StudentHomePage() {
                       </span>
                     </div>
                     <div class="all-btn all-category d-flex align-items-center">
-                      <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                      <a
+                        href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                        class="btn btn-primary"
+                      >
                         BUY NOW
                       </a>
                     </div>
@@ -1197,7 +1283,10 @@ function StudentHomePage() {
                       </span>
                     </div>
                     <div class="all-btn all-category d-flex align-items-center">
-                      <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                      <a
+                        href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                        class="btn btn-primary"
+                      >
                         BUY NOW
                       </a>
                     </div>
@@ -1263,7 +1352,10 @@ function StudentHomePage() {
                       </span>
                     </div>
                     <div class="all-btn all-category d-flex align-items-center">
-                      <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                      <a
+                        href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                        class="btn btn-primary"
+                      >
                         BUY NOW
                       </a>
                     </div>
@@ -1304,8 +1396,7 @@ function StudentHomePage() {
                   </div>
                   <h3 class="title">
                     <a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">
-                      Responsive Web Design Essentials HTML5 CSS3 and
-                      Bootstrap
+                      Responsive Web Design Essentials HTML5 CSS3 and Bootstrap
                     </a>
                   </h3>
                   <div class="course-info d-flex align-items-center">
@@ -1330,7 +1421,10 @@ function StudentHomePage() {
                       </span>
                     </div>
                     <div class="all-btn all-category d-flex align-items-center">
-                      <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                      <a
+                        href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                        class="btn btn-primary"
+                      >
                         BUY NOW
                       </a>
                     </div>
@@ -1397,7 +1491,10 @@ function StudentHomePage() {
                       </span>
                     </div>
                     <div class="all-btn all-category d-flex align-items-center">
-                      <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                      <a
+                        href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                        class="btn btn-primary"
+                      >
                         BUY NOW
                       </a>
                     </div>
@@ -1464,7 +1561,10 @@ function StudentHomePage() {
                       </span>
                     </div>
                     <div class="all-btn all-category d-flex align-items-center">
-                      <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                      <a
+                        href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                        class="btn btn-primary"
+                      >
                         BUY NOW
                       </a>
                     </div>
@@ -1505,8 +1605,7 @@ function StudentHomePage() {
                   </div>
                   <h3 class="title">
                     <a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">
-                      Responsive Web Design Essentials HTML5 CSS3 and
-                      Bootstrap
+                      Responsive Web Design Essentials HTML5 CSS3 and Bootstrap
                     </a>
                   </h3>
                   <div class="course-info d-flex align-items-center">
@@ -1531,7 +1630,10 @@ function StudentHomePage() {
                       </span>
                     </div>
                     <div class="all-btn all-category d-flex align-items-center">
-                      <a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">
+                      <a
+                        href="https://dreamslms.dreamstechnologies.com/html/checkout.html"
+                        class="btn btn-primary"
+                      >
                         BUY NOW
                       </a>
                     </div>
@@ -1554,7 +1656,10 @@ function StudentHomePage() {
                 </div>
               </div>
             </div>
-            <div class="owl-carousel instructors-course owl-theme aos" data-aos="fade-up">
+            <div
+              class="owl-carousel instructors-course owl-theme aos"
+              data-aos="fade-up"
+            >
               <div class="instructors-widget">
                 <div class="instructors-img ">
                   <a href="https://dreamslms.dreamstechnologies.com/html/instructor-list.html">
@@ -1809,8 +1914,7 @@ function StudentHomePage() {
                 <p>
                   High-definition video is video of higher resolution and
                   quality than standard-definition. While there is no
-                  standardized meaning for high-definition, generally any
-                  video.
+                  standardized meaning for high-definition, generally any video.
                 </p>
                 <ul class="course-list">
                   <li>
@@ -1821,7 +1925,10 @@ function StudentHomePage() {
                   </li>
                 </ul>
                 <div class="all-btn all-category d-flex align-items-center">
-                  <a href="https://dreamslms.dreamstechnologies.com/html/instructor-list.html" class="btn btn-primary">
+                  <a
+                    href="https://dreamslms.dreamstechnologies.com/html/instructor-list.html"
+                    class="btn btn-primary"
+                  >
                     Read More
                   </a>
                 </div>
@@ -1848,7 +1955,11 @@ function StudentHomePage() {
             <div class="testi-quotes">
               {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/qute.png" alt="Img"> */}
             </div>
-            <div class="mentor-testimonial lazy slider aos" data-aos="fade-up" data-sizes="50vw ">
+            <div
+              class="mentor-testimonial lazy slider aos"
+              data-aos="fade-up"
+              data-sizes="50vw "
+            >
               <div class="d-flex justify-content-center">
                 <div class="testimonial-all d-flex justify-content-center">
                   <div class="testimonial-two-head text-center align-items-center d-flex">
@@ -1951,8 +2062,8 @@ function StudentHomePage() {
                   <div class="col-lg-7 col-md-12">
                     <div class="top-instructors">
                       <p>
-                        Top instructors from around the world teach millions
-                        of students on Mentoring.
+                        Top instructors from around the world teach millions of
+                        students on Mentoring.
                       </p>
                     </div>
                   </div>
@@ -1995,14 +2106,17 @@ function StudentHomePage() {
               <h2>Latest Blogs</h2>
               <div class="section-text aos" data-aos="fade-up">
                 <p class="mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Eget aenean accumsan bibendum gravida maecenas augue
-                  elementum et neque. Suspendisse imperdiet.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget
+                  aenean accumsan bibendum gravida maecenas augue elementum et
+                  neque. Suspendisse imperdiet.
                 </p>
               </div>
             </div>
           </div>
-          <div class="owl-carousel blogs-slide owl-theme aos" data-aos="fade-up">
+          <div
+            class="owl-carousel blogs-slide owl-theme aos"
+            data-aos="fade-up"
+          >
             <div class="instructors-widget blog-widget">
               <div class="instructors-img">
                 <a href="https://dreamslms.dreamstechnologies.com/html/blog-list.html">
@@ -2247,7 +2361,8 @@ function StudentHomePage() {
             <div class="section-header aos" data-aos="fade-up">
               <div class="section-sub-head feature-head text-center">
                 <h2>
-                  Unlimited access to 360+ courses <br />and 1,600+ hands-on labs
+                  Unlimited access to 360+ courses <br />and 1,600+ hands-on
+                  labs
                 </h2>
               </div>
             </div>
@@ -2438,19 +2553,29 @@ function StudentHomePage() {
                   <h2 class="footer-title">News letter</h2>
                   <div class="news-letter">
                     <form>
-                      <input type="text" class="form-control" placeholder="Enter your email address" name="email" />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter your email address"
+                        name="email"
+                      />
                     </form>
                   </div>
                   <div class="footer-contact-info">
                     <div class="footer-address">
                       {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-20.svg" alt="Img" class="img-fluid"/> */}
                       <p>
-                        {" "}3556 Beech Street, San Francisco,<br /> California, CA 94108{" "}
+                        {" "}3556 Beech Street, San Francisco,<br /> California,
+                        CA 94108{" "}
                       </p>
                     </div>
                     <p>
                       {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-19.svg" alt="Img" class="img-fluid"/> */}
-                      <a href="https://dreamslms.dreamstechnologies.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9afee8fffbf7e9f6f7e9daffe2fbf7eaf6ffb4f9f5f7">
+                      <a
+                        href="https://dreamslms.dreamstechnologies.com/cdn-cgi/l/email-protection"
+                        class="__cf_email__"
+                        data-cfemail="9afee8fffbf7e9f6f7e9daffe2fbf7eaf6ffb4f9f5f7"
+                      >
                         [email&#160;protected]
                       </a>
                     </p>
@@ -2497,7 +2622,8 @@ function StudentHomePage() {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 }
 
-export default StudentHomePage
+export default TeachersHomePage;
