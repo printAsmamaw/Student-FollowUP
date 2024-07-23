@@ -36,7 +36,7 @@ export default class Nav extends Component {
                     </a>
                   </li>
                   <li class="has-submenu">
-                    <a href="#">
+                    <a href="/attend">
                       Attendance <i class="fas fa-chevron-down" />
                     </a>
                   </li>
