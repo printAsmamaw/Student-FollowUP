@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import logo from "../../asset/images/logo.png";
+import login from "../../asset/images/login.png";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -29,69 +31,28 @@ function Login() {
     }
   };
 
-  return (
-    <div className="main-wrapper log-wrap">
+  return <div className="main-wrapper log-wrap">
       <div className="row">
         <div className="col-md-6 login-bg">
           <div className="owl-carousel login-slide owl-theme">
             <div className="welcome-login">
               <div className="login-banner">
-                <img
-                  src="https://dreamslms.dreamstechnologies.com/html/assets/img/login-img.png"
-                  className="img-fluid"
-                  alt="Logo"
-                />
+                <a href="/" class="navbar-brand logo">
+                  <img className='text-center' src={login}  alt="Logo" />
+                </a>
               </div>
-              <div className="mentor-course text-center">
+              <div className="mentor-course text-center justify">
                 <h2>
                   Welcome to <br />
-                  DreamsLMS Courses.
+                  EduEthiopia
                 </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam.
-                </p>
-              </div>
-            </div>
-            <div className="welcome-login">
-              <div className="login-banner">
-                <img
-                  src="https://dreamslms.dreamstechnologies.com/html/assets/img/login-img.png"
-                  className="img-fluid"
-                  alt="Logo"
-                />
-              </div>
-              <div className="mentor-course text-center">
-                <h2>
-                  Welcome to <br />
-                  DreamsLMS Courses.
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam.
-                </p>
-              </div>
-            </div>
-            <div className="welcome-login">
-              <div className="login-banner">
-                <img
-                  src="https://dreamslms.dreamstechnologies.com/html/assets/img/login-img.png"
-                  className="img-fluid"
-                  alt="Logo"
-                />
-              </div>
-              <div className="mentor-course text-center">
-                <h2>
-                  Welcome to <br />
-                  DreamsLMS Courses.
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam.
-                </p>
+                <h5>
+                  Empowering students with a revolutionary EduEthiopia,
+                  ensuring academic success and community growth. Bridging the
+                  gap between education and society, we foster a brighter
+                  future for all. Together, we transform learning experiences
+                  into lifelong achievements.
+                </h5>
               </div>
             </div>
           </div>
@@ -102,11 +63,9 @@ function Login() {
             <div className="loginbox">
               <div className="w-100">
                 <div className="img-logo">
-                  <img
-                    src="https://dreamslms.dreamstechnologies.com/html/assets/img/logo.svg"
-                    className="img-fluid"
-                    alt="Logo"
-                  />
+                  <a href="/" class="navbar-brand logo">
+                    <img src={logo} class="img-fluid" alt="Logo" />
+                  </a>
                   <div className="back-home">
                     <Link to="/">Back to Home</Link>
                   </div>
@@ -115,34 +74,21 @@ function Login() {
                 <form onSubmit={handleLogin}>
                   <div className="input-block">
                     <label className="form-control-label">Username</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Enter your username"
-                      value={userName}
-                      onChange={(e) => setUserName(e.target.value)}
-                    />
+                    <input type="text" className="form-control" placeholder="Enter your username" value={userName} onChange={e => setUserName(e.target.value)} />
                   </div>
                   <div className="input-block">
                     <label className="form-control-label">Password</label>
                     <div className="pass-group">
-                      <input
-                        type="password"
-                        className="form-control pass-input"
-                        placeholder="Enter your password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                      />
+                      <input type="password" className="form-control pass-input" placeholder="Enter your password" value={password} onChange={e => setPassword(e.target.value)} />
                       <span className="feather-eye toggle-password" />
                     </div>
                   </div>
-                  {error && <p className="text-danger">{error}</p>}
+                  {error && <p className="text-danger">
+                      {error}
+                    </p>}
                   <div className="forgot">
                     <span>
-                      <a
-                        className="forgot-link"
-                        href="https://dreamslms.dreamstechnologies.com/html/forgot-password.html"
-                      >
+                      <a className="forgot-link" href="https://dreamslms.dreamstechnologies.com/html/forgot-password.html">
                         Forgot Password ?
                       </a>
                     </span>
@@ -162,46 +108,10 @@ function Login() {
                 </form>
               </div>
             </div>
-            <div className="google-bg text-center">
-              <span>
-                <a href="#">Or sign in with</a>
-              </span>
-              <div className="sign-google">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <img
-                        src="https://dreamslms.dreamstechnologies.com/html/assets/img/net-icon-01.png"
-                        className="img-fluid"
-                        alt="Logo"
-                      />
-                      Sign In using Google
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <img
-                        src="https://dreamslms.dreamstechnologies.com/html/assets/img/net-icon-02.png"
-                        className="img-fluid"
-                        alt="Logo"
-                      />
-                      Sign In using Facebook
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <p className="mb-0">
-                New User ?{' '}
-                <a href="https://dreamslms.dreamstechnologies.com/html/register.html">
-                  Create an Account
-                </a>
-              </p>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
 
 export default Login;

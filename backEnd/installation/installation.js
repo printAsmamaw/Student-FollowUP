@@ -24,6 +24,7 @@ router.post('/School', (req, res) => {
   });
 });
 
+
 // Create Student Table
 router.post('/Student', (req, res) => {
   const createTableQuery = `

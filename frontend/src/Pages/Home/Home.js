@@ -1,5 +1,8 @@
 import React from 'react'
 import hame from "../../asset/images/home.png"
+import logo from "../../asset/images/logo.png";
+import entrance from "../../asset/images/entrance.jpeg";
+import study from "../../asset/images/study.jpeg";
 import { Link } from 'react-router-dom'
 function Home() {
   return (
@@ -17,126 +20,20 @@ function Home() {
 <span></span>
 </span>
 </a>
-<a href="https://dreamslms.dreamstechnologies.com/html/index.html" class="navbar-brand logo">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/logo.svg" class="img-fluid" alt="Logo"> */}
+<a href="/" class="navbar-brand logo">
+<img src={logo} class="img-fluid" alt="Logo"/>
 </a>
 </div>
 <div class="main-menu-wrapper">
 <div class="menu-header">
-<a href="https://dreamslms.dreamstechnologies.com/html/index.html" class="menu-logo">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/logo.svg" class="img-fluid" alt="Logo"> */}
+<a href="/" class="menu-logo">
+<img src={logo} class="img-fluid" alt="Logo"/>
 </a>
 <a id="menu_close" class="menu-close" href="javascript:void(0);">
 <i class="fas fa-times"></i>
 </a>
 </div>
-{/* <ul class="main-nav">
-<li class="has-submenu active">
-<a class href="#">Home <i class="fas fa-chevron-down"></i></a>
-<ul class="submenu">
-<li class="active"><a href="https://dreamslms.dreamstechnologies.com/html/index.html">Home</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/index-two.html">Home Two</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/index-three.html">Home Three</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/index-four.html">Home Four</a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a href="#">Instructor <i class="fas fa-chevron-down"></i></a>
-<ul class="submenu">
-<li class="has-submenu">
-<a href="https://dreamslms.dreamstechnologies.com/html/instructor-list.html">Instructor</a>
-<ul class="submenu">
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-list.html">List</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-grid.html">Grid</a></li>
-</ul>
-</li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-dashboard.html">Dashboard</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html">My Profile</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-course.html">My Course</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-wishlist.html">Wishlist</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-reviews.html">Reviews</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-quiz.html">My Quiz Attempts</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-orders.html">Orders</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-qa.html">Question & Answer</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-referral.html">Referrals</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-chat.html">Messages</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-tickets.html">Support Ticket</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-notifications.html">Notifications</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/instructor-settings.html">Settings</a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a href="#">Student <i class="fas fa-chevron-down"></i></a>
-<ul class="submenu first-submenu">
-<li class="has-submenu">
-<a href="https://dreamslms.dreamstechnologies.com/html/students-list.html">Student</a>
-<ul class="submenu">
-<li><a href="https://dreamslms.dreamstechnologies.com/html/students-list.html">List</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/students-grid.html">Grid</a></li>
-</ul>
-</li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-dashboard.html">Student Dashboard</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-profile.html">My Profile</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-courses.html">Enrolled Courses</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-wishlist.html">Wishlist</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-reviews.html">Reviews</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-quiz.html">My Quiz Attempts</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-order-history.html">Orders</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-qa.html">Question & Answer</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-referral.html">Referrals</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-messages.html">Messages</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-tickets.html">Support Ticket</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/student-settings.html">Settings</a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a href="#">Pages <i class="fas fa-chevron-down"></i></a>
-<ul class="submenu">
-<li><a href="https://dreamslms.dreamstechnologies.com/html/notifications.html">Notification</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/pricing-plan.html">Pricing Plan</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/wishlist.html">Wishlist</a></li>
-<li class="has-submenu">
-<a href="https://dreamslms.dreamstechnologies.com/html/course-list.html">Course</a>
-<ul class="submenu">
-<li><a href="https://dreamslms.dreamstechnologies.com/html/add-course.html">Add Course</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/course-list.html">Course List</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/course-grid.html">Course Grid</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">Course Details</a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a href="https://dreamslms.dreamstechnologies.com/html/come-soon.html">Error</a>
-<ul class="submenu">
-<li><a href="https://dreamslms.dreamstechnologies.com/html/come-soon.html">Coming Soon</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/error-404.html">404</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/error-500.html">500</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/under-construction.html">Under Construction</a></li>
-</ul>
-</li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/faq.html">FAQ</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/support.html">Support</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/job-category.html">Category</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/cart.html">Cart</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/checkout.html">Checkout</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/login.html">Login</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/register.html">Register</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/forgot-password.html">Forgot Password</a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a href="#">Blog <i class="fas fa-chevron-down"></i></a>
-<ul class="submenu">
-<li><a href="https://dreamslms.dreamstechnologies.com/html/blog-list.html">Blog List</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/blog-grid.html">Blog Grid</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/blog-masonry.html">Blog Masonry</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/blog-modern.html">Blog Modern</a></li>
-<li><a href="https://dreamslms.dreamstechnologies.com/html/blog-details.html">Blog Details</a></li>
-</ul>
-</li>
-<li class="login-link">
-<a href="https://dreamslms.dreamstechnologies.com/html/login.html">Login / Signup</a>
-</li>
-</ul> */}
+
 </div>
 <ul class="nav header-navbar-rht">
 <li class="nav-item">
@@ -159,7 +56,7 @@ function Home() {
 <div class="home-slide-face aos" data-aos="fade-up">
 <div class="home-slide-text ">
 <h5>Welcome to </h5>
-<h1>XYZ Academy</h1>
+<h1>EduEthiopia</h1>
 <p>Own your future learning new skills online</p>
 </div>
 <div class="banner-content">
@@ -182,22 +79,13 @@ function Home() {
 </div>
 </form>
 </div>
-<div class="trust-user">
-<p>Trusted by over 15K Users <br/>worldwide since 2022</p>
-<div class="trust-rating d-flex align-items-center">
-<div class="rate-head">
-<h2><span>1000</span>+</h2>
-</div>
-<div class="rating d-flex align-items-center">
-<h2 class="d-inline-block average-rating">4.4</h2>
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star filled"></i>
-</div>
-</div>
-</div>
+<h5>
+                  Empowering students with a revolutionary EduEthiopia,
+                  ensuring academic success and community growth. Bridging the
+                  gap between education and society, we foster a brighter
+                  future for all. Together, we transform learning experiences
+                  into lifelong achievements.
+                </h5>
 </div>
 </div>
 <div class="col-md-5 d-flex align-items-center">
@@ -279,227 +167,15 @@ function Home() {
 </section>
 
 
-<section class="section how-it-works">
-<div class="container">
-<div class="section-header aos" data-aos="fade-up">
-<div class="section-sub-head">
-<span>Favourite Course</span>
-<h2>Top Category</h2>
-</div>
-<div class="all-btn all-category d-flex align-items-center">
-<a href="https://dreamslms.dreamstechnologies.com/html/job-category.html" class="btn btn-primary">All Categories</a>
-</div>
-</div>
-<div class="section-text aos" data-aos="fade-up">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget aenean accumsan bibendum gravida maecenas augue elementum et neque. Suspendisse imperdiet.</p>
-</div>
-<div class="owl-carousel mentoring-course owl-theme aos" data-aos="fade-up">
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Angular Development</div>
-</div>
-</div>
-<p>40 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-01.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Docker Development</div>
-</div>
-</div>
-<p>45 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-02.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Node JS Frontend</div>
-</div>
-</div>
-<p>40 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-03.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Swift Development</div>
-</div>
-</div>
-<p>23 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-04.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Python Development</div>
-</div>
-</div>
-<p>30 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-05.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">React<br/> Native</div>
-</div>
-</div>
-<p>80 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-04.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Angular Development</div>
-</div>
-</div>
-<p>40 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-01.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Docker Development</div>
-</div>
-</div>
-<p>45 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-02.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Node JS Frontend</div>
-</div>
-</div>
-<p>40 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-03.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Swift Development</div>
-</div>
-</div>
-<p>23 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-04.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Python Development</div>
-</div>
-</div>
-<p>30 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-01.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Docker Development</div>
-</div>
-</div>
-<p>45 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-02.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Node JS Frontend</div>
-</div>
-</div>
-<p>40 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-03.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Swift Development</div>
-</div>
-</div>
-<p>23 Instructors</p>
-</div>
-</div>
-<div class="feature-box text-center ">
-<div class="feature-bg">
-<div class="feature-header">
-<div class="feature-icon">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/categories-icon-04.png" alt="Img"> */}
-</div>
-<div class="feature-cont">
-<div class="feature-text">Python Development</div>
-</div>
-</div>
-<p>30 Instructors</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+
 
 
 <section class="section new-course">
 <div class="container">
 <div class="section-header aos" data-aos="fade-up">
 <div class="section-sub-head">
-<span>What’s New</span>
-<h2>Featured Courses</h2>
+<span>What’s we Proved</span>
+<h2>Our Service</h2>
 </div>
 <div class="all-btn all-category d-flex align-items-center">
 <a href="https://dreamslms.dreamstechnologies.com/html/course-list.html" class="btn btn-primary">All Courses</a>
@@ -515,10 +191,10 @@ function Home() {
 <div class="product">
 <div class="product-img">
 <a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">
-{/* <img class="img-fluid" alt="Img" src="https://dreamslms.dreamstechnologies.com/html/assets/img/course/course-01.jpg"> */}
+<img class="img-fluid" alt="Img" src={entrance}/>
 </a>
 <div class="price">
-<h3>$300 <span>$99.00</span></h3>
+{/* <h3>$300 <span>$99.00</span></h3> */}
 </div>
 </div>
 <div class="product-content">
@@ -526,23 +202,23 @@ function Home() {
 <div class="course-group-img d-flex">
 {/* <a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html"><img src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user1.jpg" alt="Img" class="img-fluid"></a> */}
 <div class="course-name">
-<h4><a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html">Nicole Brown</a></h4>
-<p>Instructor</p>
+<h4><a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html">Grade 12</a></h4>
+<p>Entrance exam</p>
 </div>
 </div>
 <div class="course-share d-flex align-items-center justify-content-center">
 <a href="#"><i class="fa-regular fa-heart"></i></a>
 </div>
 </div>
-<h3 class="title instructor-text"><a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">Information About UI/UX Design Degree</a></h3>
+<h3 class="title instructor-text"><a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">Practice Past Exam in Online  </a></h3>
 <div class="course-info d-flex align-items-center">
 <div class="rating-img d-flex align-items-center">
 {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-01.svg" alt="Img"> */}
-<p>12+ Lesson</p>
+<p>last past 5+ years</p>
 </div>
 <div class="course-view d-flex align-items-center">
 {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-02.svg" alt="Img"> */}
-<p>9hr 30min</p>
+<p>1000 Questions</p>
 </div>
 </div>
 <div class="d-flex align-items-center justify-content-between">
@@ -555,7 +231,7 @@ function Home() {
 <span class="d-inline-block average-rating"><span>4.0</span> (15)</span>
 </div>
 <div class="all-btn all-category d-flex align-items-center">
-<a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">BUY NOW</a>
+<a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">Free</a>
 </div>
 </div>
 </div>
@@ -567,34 +243,33 @@ function Home() {
 <div class="product">
 <div class="product-img">
 <a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">
-{/* <img class="img-fluid" alt="Img" src="https://dreamslms.dreamstechnologies.com/html/assets/img/course/course-02.jpg"> */}
-</a>
+<img src={entrance} alt='img'/></a>
 <div class="price">
-<h3>$400 <span>$99.00</span></h3>
+{/* <h3>$300 <span>$99.00</span></h3> */}
 </div>
 </div>
 <div class="product-content">
 <div class="course-group d-flex">
 <div class="course-group-img d-flex">
-{/* <a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html"><img src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user2.jpg" alt="Img" class="img-fluid"></a> */}
+{/* <a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html"><img src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user1.jpg" alt="Img" class="img-fluid"></a> */}
 <div class="course-name">
-<h4><a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html">Jenis R.</a></h4>
-<p>Instructor</p>
+<h4><a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html">Grade 8</a></h4>
+<p>Metric exam</p>
 </div>
-</div>
+</div >
 <div class="course-share d-flex align-items-center justify-content-center">
 <a href="#"><i class="fa-regular fa-heart"></i></a>
 </div>
 </div>
-<h3 class="title instructor-text"><a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">Wordpress for Beginners - Master Wordpress Quickly</a></h3>
+<h3 class="title instructor-text"><a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">Practice Past Exam in Online  </a></h3>
 <div class="course-info d-flex align-items-center">
 <div class="rating-img d-flex align-items-center">
 {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-01.svg" alt="Img"> */}
-<p>11+ Lesson</p>
+<p>last past 5+ years</p>
 </div>
 <div class="course-view d-flex align-items-center">
 {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-02.svg" alt="Img"> */}
-<p>6hr 30min</p>
+<p>6000 Questions</p>
 </div>
 </div>
 <div class="d-flex align-items-center justify-content-between">
@@ -604,10 +279,10 @@ function Home() {
 <i class="fas fa-star filled"></i>
 <i class="fas fa-star filled"></i>
 <i class="fas fa-star"></i>
-<span class="d-inline-block average-rating"><span>4.3</span> (15)</span>
+<span class="d-inline-block average-rating"><span>4.0</span> (15)</span>
 </div>
 <div class="all-btn all-category d-flex align-items-center">
-<a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">BUY NOW</a>
+<a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">Free</a>
 </div>
 </div>
 </div>
@@ -619,34 +294,34 @@ function Home() {
 <div class="product">
 <div class="product-img">
 <a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">
-{/* <img class="img-fluid" alt="Img" src="https://dreamslms.dreamstechnologies.com/html/assets/img/course/course-03.jpg"> */}
+<img src={entrance} alt='img'/>
 </a>
-<div class="price combo">
-<h3>FREE</h3>
+<div class="price">
+{/* <h3>$300 <span>$99.00</span></h3> */}
 </div>
 </div>
 <div class="product-content">
 <div class="course-group d-flex">
 <div class="course-group-img d-flex">
-{/* <a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html"><img src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user5.jpg" alt="Img" class="img-fluid"></a> */}
+{/* <a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html"><img src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user1.jpg" alt="Img" class="img-fluid"></a> */}
 <div class="course-name">
-<h4><a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html">Jesse Stevens</a></h4>
-<p>Instructor</p>
+<h4><a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html">Grade 6</a></h4>
+<p>Ministry exam</p>
 </div>
 </div>
 <div class="course-share d-flex align-items-center justify-content-center">
 <a href="#"><i class="fa-regular fa-heart"></i></a>
 </div>
 </div>
-<h3 class="title instructor-text"><a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">Sketch from A to Z (2022): Become an app designer</a></h3>
+<h3 class="title instructor-text"><a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">Practice Past Exam in Online  </a></h3>
 <div class="course-info d-flex align-items-center">
 <div class="rating-img d-flex align-items-center">
 {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-01.svg" alt="Img"> */}
-<p>16+ Lesson</p>
+<p>last past 5+ years</p>
 </div>
 <div class="course-view d-flex align-items-center">
 {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-02.svg" alt="Img"> */}
-<p>12hr 30min</p>
+<p>1000 Questions</p>
 </div>
 </div>
 <div class="d-flex align-items-center justify-content-between">
@@ -656,77 +331,28 @@ function Home() {
 <i class="fas fa-star filled"></i>
 <i class="fas fa-star filled"></i>
 <i class="fas fa-star"></i>
-<span class="d-inline-block average-rating"><span>4.5</span> (15)</span>
+<span class="d-inline-block average-rating"><span>4.0</span> (15)</span>
 </div>
 <div class="all-btn all-category d-flex align-items-center">
-<a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">BUY NOW</a>
+<a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">Free</a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
+
+
+
 <div class="col-lg-4 col-md-6 d-flex">
 <div class="course-box d-flex aos" data-aos="fade-up">
 <div class="product">
 <div class="product-img">
 <a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">
-{/* <img class="img-fluid" alt="Img" src="https://dreamslms.dreamstechnologies.com/html/assets/img/course/course-04.jpg"> */}
+<img class="img-fluid" alt="Img" src={study}/>
 </a>
 <div class="price">
-<h3>$500 <span>$99.00</span></h3>
-</div>
-</div>
-<div class="product-content">
-<div class="course-group d-flex">
-<div class="course-group-img d-flex">
-{/* <a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html"><img src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user4.jpg" alt="Img" class="img-fluid"></a> */}
-<div class="course-name">
-<h4><a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html">Nicole Brown</a></h4>
-<p>Instructor</p>
-</div>
-</div>
-<div class="course-share d-flex align-items-center justify-content-center">
-<a href="#"><i class="fa-regular fa-heart"></i></a>
-</div>
-</div>
-<h3 class="title instructor-text"><a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">Learn Angular Fundamentals From beginning to advance lavel</a></h3>
-<div class="course-info d-flex align-items-center">
-<div class="rating-img d-flex align-items-center">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-01.svg" alt="Img"> */}
-<p>10+ Lesson</p>
-</div>
-<div class="course-view d-flex align-items-center">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-02.svg" alt="Img"> */}
-<p>8hr 30min</p>
-</div>
-</div>
-<div class="d-flex align-items-center justify-content-between">
-<div class="rating m-0">
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star"></i>
-<span class="d-inline-block average-rating"><span>4.2</span> (15)</span>
-</div>
-<div class="all-btn all-category d-flex align-items-center">
-<a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">BUY NOW</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 d-flex">
-<div class="course-box d-flex aos" data-aos="fade-up">
-<div class="product">
-<div class="product-img">
-<a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">
-{/* <img class="img-fluid" alt="Img" src="https://dreamslms.dreamstechnologies.com/html/assets/img/course/course-05.jpg"> */}
-</a>
-<div class="price">
-<h3>$300 <span>$99.00</span></h3>
+{/* <h3>$300 <span>$99.00</span></h3> */}
 </div>
 </div>
 <div class="product-content">
@@ -734,37 +360,22 @@ function Home() {
 <div class="course-group-img d-flex">
 {/* <a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html"><img src="https://dreamslms.dreamstechnologies.com/html/assets/img/user/user3.jpg" alt="Img" class="img-fluid"></a> */}
 <div class="course-name">
-<h4><a href="https://dreamslms.dreamstechnologies.com/html/instructor-profile.html">John Smith</a></h4>
-<p>Instructor</p>
+
 </div>
 </div>
 <div class="course-share d-flex align-items-center justify-content-center">
 <a href="#"><i class="fa-regular fa-heart"></i></a>
 </div>
 </div>
-<h3 class="title instructor-text"><a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">Build Responsive Real World Websites with HTML5 and CSS3</a></h3>
+<h3 class="title instructor-text"><a href="https://dreamslms.dreamstechnologies.com/html/course-details.html">Discussion in online</a></h3>
 <div class="course-info d-flex align-items-center">
 <div class="rating-img d-flex align-items-center">
 {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-01.svg" alt="Img"> */}
-<p>13+ Lesson</p>
-</div>
-<div class="course-view d-flex align-items-center">
-{/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/icon/icon-02.svg" alt="Img"> */}
-<p>10hr 30min</p>
+
 </div>
 </div>
 <div class="d-flex align-items-center justify-content-between">
-<div class="rating m-0">
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star filled"></i>
-<i class="fas fa-star"></i>
-<span class="d-inline-block average-rating"><span>4.0</span> (15)</span>
-</div>
-<div class="all-btn all-category d-flex align-items-center">
-<a href="https://dreamslms.dreamstechnologies.com/html/checkout.html" class="btn btn-primary">BUY NOW</a>
-</div>
+
 </div>
 </div>
 </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import hame from "../../asset/images/home.png";
+import logo from "../../asset/images/logo.png";
 import { Link } from 'react-router-dom';
 function StudentHomePage() {
   return <div class="main-wrapper">
@@ -15,17 +16,14 @@ function StudentHomePage() {
                     <span />
                   </span>
                 </a>
-                <a href="https://dreamslms.dreamstechnologies.com/html/index.html" class="navbar-brand logo">
-                  {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/logo.svg" class="img-fluid" alt="Logo"> */}
+                <a href="/" class="navbar-brand logo">
+                  <img src={logo} class="img-fluid" alt="Logo" />
                 </a>
               </div>
               <div class="main-menu-wrapper">
                 <div class="menu-header">
-                  <a href="https://dreamslms.dreamstechnologies.com/html/index.html" class="menu-logo">
-                    {/* <img src="https://dreamslms.dreamstechnologies.com/html/assets/img/logo.svg" class="img-fluid" alt="Logo"> */}
-                  </a>
-                  <a id="menu_close" class="menu-close" href="javascript:void(0);">
-                    <i class="fas fa-times" />
+                  <a href="/" class="menu-logo">
+                    <img src={logo} class="img-fluid" alt="Logo" />
                   </a>
                 </div>
                 <ul class="main-nav">
