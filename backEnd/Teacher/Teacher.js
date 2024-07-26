@@ -83,4 +83,99 @@ router.post('/updateMessageStatus', (req, res) => {
     }
   });
 });
+router.post('/attendance', async (req, res) => {
+  const { attendance } = req.body;
+
+  if (!attendance || !Array.isArray(attendance)) {
+    return res.status(400).send('Attendance data is required and must be an array');
+  }
+
+  const insertAttendanceQuery = `
+    INSERT INTO Attendance (studentId, date, status, savedBy)
+    VALUES (?, ?, ?, ?);
+  `; 
+  try {
+    const conn = await connection.getConnection();
+    await conn.beginTransaction();
+
+    const tasks = attendance.map(record => {
+      return conn.query(insertAttendanceQuery, [
+        record.studentId,
+        record.date,
+        record.status ? 'Present' : 'Absent',
+        record.savedBy
+      ]);
+    });
+
+    await Promise.all(tasks);
+    await conn.commit();
+    conn.release();
+
+    res.status(201).send({ status: 'Attendance records stored successfully' });
+  } catch (err) {
+    console.error('Error inserting attendance records:', err);
+    res.status(500).send('Error inserting attendance records');
+  }
+});
+router.get('/students', async (req, res) => {
+  try {
+    const [students] = await connection.query('SELECT studentId, firstName FROM student');
+    res.json(students);
+  } catch (error) {
+    console.error('Error fetching students:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+router.get('/lastAttendance', async (req, res) => {
+  try {
+    const [attendanceRecords] = await connection.query(`
+      SELECT a.studentId, s.name, a.date, a.status
+      FROM Attendance a
+      JOIN Students s ON a.studentId = s.id
+      WHERE (a.studentId, a.date) IN (
+        SELECT studentId, date
+        FROM Attendance
+        ORDER BY date DESC
+        LIMIT 3
+      )
+      ORDER BY a.studentId, a.date DESC
+    `);
+    res.json(attendanceRecords);
+  } catch (error) {
+    console.error('Error fetching attendance records:', error);
+    res.status(500).send('Internal Server Error');
+  }
+}); 
+router.post('/AddQuestion', async (req, res) => {
+  const { question, choiceA, choiceB, choiceC, choiceD, correctAnswer, choiceFlag } = req.body;
+
+  if (!question || !choiceA || !choiceB || !choiceC || !choiceD || !correctAnswer || !choiceFlag) {
+    return res.status(400).send('All fields are required');
+  }
+  const insertQuestionQuery = `
+    INSERT INTO Question (question, choiceA, choiceB, choiceC, choiceD, correctAnswer, choiceFlag)
+    VALUES (?, ?, ?, ?, ?, ?, ?);
+  `;
+  try {
+    const [results] = await connection.query(insertQuestionQuery, [question, choiceA, choiceB, choiceC, choiceD, correctAnswer, choiceFlag]);
+    res.status(201).send({ status: 'Question inserted successfully', id: results.insertId });
+  } catch (err) {
+    console.error('Error inserting question:', err);
+    res.status(500).send('Error inserting question');
+  }
+});
+router.get('/questions', async (req, res) => { 
+  const fetchQuestionsQuery = `
+    SELECT id, question, choiceA, choiceB, choiceC, choiceD, correctAnswer, choiceFlag
+    FROM Question;
+  `;
+
+  try {
+    const [results] = await connection.query(fetchQuestionsQuery);
+    res.status(200).json(results);
+  } catch (err) {
+    console.error('Error fetching questions:', err);
+    res.status(500).send('Error fetching questions');
+  }
+});
 module.exports = router;

@@ -67,6 +67,65 @@ router.post('/Teacher', (req, res) => {
     res.status(201).send('Teacher table created successfully');
   });
 });
+// Create Attendance Table
+router.post('/Attendance', (req, res) => {
+  const createTableQuery = `
+    CREATE TABLE IF NOT EXISTS Attendance (
+      savedBy VARCHAR(255),
+      studentId VARCHAR(50),
+      Date VARCHAR(50),
+      Status VARCHAR(255)
+    );
+  `;
+  connection.query(createTableQuery, (err, results) => {
+    if (err) {
+      console.error('Error creating Attendance table:', err);
+      res.status(500).send('Error creating Attendance table');
+      return;
+    }
+    res.status(201).send('Attendance table created successfully');
+  });
+});
+// router.post('/Attendance', async (req, res) => {
+//   const createTableQuery = `
+//     CREATE TABLE IF NOT EXISTS Attendance (
+//       savedBy VARCHAR(255),
+//       studentId VARCHAR(50),
+//       Date VARCHAR(50),
+//       Status VARCHAR(255)
+//     );
+//   `;
+
+//   try {
+//     const [results] = await connection.query(createTableQuery);
+//     res.status(201).send('Attendance table created successfully');
+//   } catch (err) {
+//     console.error('Error creating Attendance table:', err);
+//     res.status(500).send('Error creating Attendance table');
+//   }
+// });
+router.post('/InsertQuestion', async (req, res) => {
+  const createTableQuery = `
+    CREATE TABLE IF NOT EXISTS Question (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      question VARCHAR(255),
+      choiceA VARCHAR(255),
+      choiceB VARCHAR(255),
+      choiceC VARCHAR(255),
+      choiceD VARCHAR(255),
+      correctAnswer VARCHAR(255),
+      choiceFlag VARCHAR(255)
+    );
+  `;
+
+  try {
+    const [results] = await connection.query(createTableQuery);
+    res.status(201).send('Question table created successfully');
+  } catch (err) {
+    console.error('Error creating question table:', err);
+    res.status(500).send('Error creating question table');
+  }
+});
 
 // Create Parent Table
 router.post('/Parent', (req, res) => {
