@@ -32,33 +32,7 @@ function App() {
       }
     };
 
-    const handleVisibilityChange = async () => {
-      if (document.visibilityState === 'hidden') {
-        console.log('User has left the tab');
-        if (userId) {
-          try {
-            await axios.post('http://localhost:3001/Users/activity', {
-              userId,
-              userStatus: 'offline'
-            });
-          } catch (err) {
-            console.error('Error sending activity data:', err);
-          }
-        }
-      } else {
-        console.log('User is back on the tab');
-        if (userId) {
-          try {
-            await axios.post('http://localhost:3001/Users/activity', {
-              userId,
-              userStatus: 'online'
-            });
-          } catch (err) {
-            console.error('Error sending activity data:', err);
-          }
-        }
-      }
-    };
+   zz
 
     window.addEventListener('beforeunload', handleBeforeUnload);
     document.addEventListener('visibilitychange', handleVisibilityChange);
