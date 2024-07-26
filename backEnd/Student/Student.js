@@ -59,20 +59,18 @@ router.post('/upload', upload.single('file'), async (req, res) => {
 });
 router.post('/login', async (req, res) => {
   const { userName, Password } = req.body;
+  console.log(req.body);
 
   if (!userName || !Password) {
     return res.status(400).send('userName and Password are required');
   }
 
   const findUserQuery = `
-    SELECT * FROM Student WHERE userName = ?;
+    SELECT userName, Password, schoolId FROM Student WHERE userName = ?;
   `;
-  connection.query(findUserQuery, [userName], async (err, results) => {
-    if (err) {
-      console.error('Error finding user:', err);
-      return res.status(500).send('Error finding user');
-    }
 
+  try {
+    const [results] = await connection.query(findUserQuery, [userName]);
     if (results.length === 0) {
       console.log('No user found with userName:', userName);
       return res.status(400).send('Invalid userName or Password');
@@ -81,23 +79,22 @@ router.post('/login', async (req, res) => {
     const user = results[0];
     console.log('User found:', user);
 
-    try {
-      const match = await bcrypt.compare(Password, user.Password);
-      console.log('Password match result:', match);
+    const match = await bcrypt.compare(Password, user.Password);
+    console.log('Password match result:', match);
 
-      if (!match) {
-        console.log('Passwords do not match:', Password, user.Password);
-        return res.status(400).send('Invalid userName or Password');
-      }
-
-      res.status(200).send({ status: 'Login successful',
-                              userId:user.schoolId
-      });
-    } catch (bcryptErr) {
-      console.error('Error comparing passwords:', bcryptErr);
-      return res.status(500).send('Error comparing passwords');
+    if (!match) {
+      console.log('Passwords do not match:', Password, user.Password);
+      return res.status(400).send('Invalid userName or Password');
     }
-  });
+
+    res.status(200).send({ 
+      status: 'Login successful',
+      userId: user.schoolId
+    });
+  } catch (err) {
+    console.error('Error during login:', err);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 module.exports = router;

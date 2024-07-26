@@ -46,7 +46,7 @@ function TeachersHomePage() {
                     </a>
                   </li>
                   <li class="has-submenu">
-                    <Link to="/attend">
+                    <Link to="/TeackAtendan">
                       Take Attendance <i class="fas fa-chevron-down" />
                     </Link>
                   </li>

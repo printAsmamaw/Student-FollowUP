@@ -9,12 +9,13 @@ import ChatBody from "./Pages/Students/Chat/chatBody/ChatBody";
 import Check from "./Pages/Check";
 import Attendance from "./Pages/Students/Attendance/Attendance";
 import TeachersHomePage from "./Pages/Teachers/TeachesHomePages";
-
+import Teachera from "./Pages/Teachers/Attendance/Attendance";
+import AddQuestionForm from "./Pages/Teachers/AddQuestionForm"
+import OnlineTest from './Pages/OnlineTest';
 
 function App() {
   useEffect(() => {
     const userId = localStorage.getItem('userId'); // Retrieve userId from local storage
-
     const handleBeforeUnload = async (event) => {
       console.log('User is leaving the page');
       event.preventDefault();
@@ -75,9 +76,12 @@ function App() {
         <Route path="/Signup" element={<SignUp />} />
         <Route path="/Student" element={<StudentHomePage />} />
         <Route path="/Check" element={<Check />} />
+        <Route path="/TeackAtendan" element={<Teachera />}/>
         {/* <Route path="/Student?" element={<StudentHomePage />} /> */}
-        <Route path="/Student?" element={<TeachersHomePage />} />
-        <Route path="/chat" element={<ChatBody />} />
+        <Route path="/StudentAttendance" element={<TeachersHomePage />} />
+        <Route path="/OnlineTest" element={<OnlineTest />} />
+        <Route path="/AddQuestionForm" element={<AddQuestionForm />} />
+        <Route path="/chat/:id" element={<ChatBody />} />
         <Route path="/attend" element={<Attendance />} />
       </Routes>
     </div>
