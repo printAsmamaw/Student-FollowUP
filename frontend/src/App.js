@@ -32,7 +32,6 @@ function App() {
       }
     };
 
-   zz
 
     window.addEventListener('beforeunload', handleBeforeUnload);
     document.addEventListener('visibilitychange', handleVisibilityChange);
